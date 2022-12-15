@@ -1,38 +1,457 @@
-.App {
-  text-align: center;
+.homepage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-container{
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    padding-left: 70px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-rigth{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 90px;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-rigth form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-left h1{
+    font-size: 45px;
+    font-weight: bolder;
+    color: red;
+    margin-left: 100px;
+}
+
+
+.nav-left h1:hover{
+    color: white;
+    scale: 1.2;
+}
+
+.nav-rigth input{
+    height: 50px;
+    width: 900px;
+    border-radius: 10px;
+    border: none;
+    padding: 30px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.nav-rigth button{
+    background-color: white;
+    border-radius: 999px;
+    padding: 10px;
+    border: none;
+    margin-left: 20px ;
+}
+.nav-rigth button:hover{
+    background-color:whitesmoke;
+    color: white;
+    scale: 1.2;
+}
+
+.nav-rigth span{
+    position: absolute;
+    color: #ffffff;
+    background-color: red;
+    padding: 10px;
+    border-radius: 9999px;
+    width: 5px;
+    height: 5px;
+    font: bold;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movies-container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.movies{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.suggession{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.suggession-left{
+    font-size: 20px;
+    height: 600px;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    
+}
+
+.suggession-left button{
+    background-color: red;
+    color: white;
+    border-radius: 999px;
+    padding: 15px;
+    border: none;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.suggession-left button:hover{
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+}
+
+.suggession-right{
+    height: 600px;
+    width: 80%;
+    box-sizing: border-box;
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 250px;
+    
+}
+
+.suggession-right img{
+    height: 100%;
+    width: 550px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 5px #ffffff;
+
+}
+
+.suggession-right img:hover{
+    filter : brightness(1.1);
+    scale: 1.02;
+    box-shadow: 10px 10px 5px #000000;
+}
+
+
+.suggession-overview{
+    box-sizing: border-box;
+    width: 400px;
+}
+
+
+.slide{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.cart-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-cart{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.header-cart button{
+    background-color: red;
+    color: white;
+    border-radius: 999px;
+    padding: 15px;
+    border: none;
+    font-size: 16px;
+    font-weight: bolder;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.header-cart button:hover{
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+}
+
+
+.cart-container{
+    height: auto;
+}
+
+
+.cart-item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    box-sizing: border-box;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000000;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    color: #000000;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+.cart-item:hover{
+    background-color: snow;
+
+}
+
+
+.cart-item img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px black;
+    object-fit: cover;
+}
+
+.cart-item img:hover{
+    filter : brightness(1.1);
+    scale: 1.02;
+    box-shadow: 10px 10px 5px #ffff;
+}
+
+.cart-warpper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.cart-item-info{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 10px;
+    margin-left: 30px;
+
+}
+
+
+.prize-actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.prize-actions button{
+    background-color: red;
+    color: white;
+    border-radius: 999px;
+    padding: 15px;
+    border: none;
+    font-size: 16px;
+    font-weight: bolder;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.prize-actions h1{
+    font-size: 30px;
+    font-weight: bolder;
+    color: #000000;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.prize-actions button:hover{
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+    border-radius: 999px;
+}
+
+.delete-button{
+    position: absolute;
+    color: red;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: bolder;
+    right: 0;
+    top: 0;
+    border-radius: 10px;
+    
+
+}
+
+.delete-button:hover{
+    color: white;
+}
+
+
+.total-sections{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.total-sections button{
+    background-color: red;
+    color: white;
+    border-radius: 999px;
+    padding: 15px;
+    border: none;
+    font-size: 16px;
+    font-weight: bolder;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.total-sections button:hover{
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+    border-radius: 999px;
+}
+
+.address-section{
+    position: relative;
+    margin-top: 30px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 80%;
+    height: 800px;
+    background-color: snow;
+    padding: 20px;
+}
+
+.address-section h1{
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin: 34px;
+}
+
+.address-section label{
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin: 34px;
+}
+.address-section form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.address-section input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+}
+
+
+.address-section button{
+    padding-left: 70px;
+    padding-right: 70px;
+    position: absolute;
+    bottom: 50px;
+    right: 130px;
+}
+
+.countdown{
+    position: absolute;
+    top: 0;
+    right: 0;
 }
